@@ -10,6 +10,6 @@ Here we provide the code of training our model on the Mini-ImageNet dataset.
 
 1. Download the images of the Mini-ImageNet dataset and put these images into the 'data/miniimagenet' folder.
 
-2. Prepare the pre-trained model. Download BigResNet12 models from 'https://github.com/cyvius96/few-shot-meta-baseline'.
+2. Prepare the pre-trained model. Download BigResNet12 models from 'https://github.com/Sha-Lab/FEAT'.
  
 3. Run the corresponding train_protonet.py.
