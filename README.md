@@ -19,13 +19,13 @@ Concretely,
 For 1-shot inductive tasks, please run:
 -------
 ```
-python inductive_oneshot/train_protonet.py --hyperbolic --c_lr 0.01 --lr 1e-7 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 100 --step_size 40 --model newres12 --query 15 --rerank 80 --validation_way 5 --way 10 --shot 1 --load_init_weight --multihead 20 --divide 100  --l 0.0000001 
+python inductive_oneshot/train_protonet.py --c_lr 0.001 --lr 1e-7 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 100 --step_size 40 --model bigres12 --query 15 --rerank 80 --validation_way 5 --way 10 --shot 1 --load_init_weight --setting 'inductive' --multihead 20 --divide 1
 ```
 
 For 5-shot inductive tasks, please run:
 -------
 ```
-python inductive_multishot/train_protonet.py --hyperbolic --c_lr 0.01 --lr 1e-7 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 100 --step_size 40 --model newres12 --query 15 --rerank 20 --validation_way 5 --way 10 --shot 5 --load_init_weight --divide 200  --l 0.0000001
+python inductive_multishot/train_protonet.py --c_lr 0.01 --lr 1e-6 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 100 --step_size 40 --model bigres12 --query 15 --rerank 11 --validation_way 5 --way 10 --shot 5 --load_init_weight --setting 'inductive' --multihead 1 --divide 200
 ```
 
 For 1-shot transductive tasks, please run:
