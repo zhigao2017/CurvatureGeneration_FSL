@@ -51,7 +51,7 @@ if __name__ == '__main__':
     parser.add_argument('--init_weights', type=str, default='/home/mcislab/gaozhi/hyperbolic-image-embeddings-master/hyperbolic-image-embeddings-master_multidistanceFBPproto_metarerank/examples/fewshot/models/newRes12-pre.pth')   
     parser.add_argument('--gpu', type=str, default='0')
     parser.add_argument('--rerankcontroller_hidden', type=str, default='True')
-    parser.add_argument('--l', type=float, default=0.005)
+    parser.add_argument('--l', type=float, default=1e-6)
     parser.add_argument('--lr_decay', type=bool, default=True)
     parser.add_argument('--train_c', action='store_true', default=False)
     parser.add_argument('--train_x', action='store_true', default=False)
