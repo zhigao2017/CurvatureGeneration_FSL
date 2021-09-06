@@ -40,5 +40,6 @@ For 5-shot transductive tasks, please run:
 python transductive_multishot/train_protonet.py --hyperbolic --c_lr 0.01 --lr 1e-7 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 200 --step_size 40 --model newres12 --query 15 --rerank 60 --validation_way 5 --way 10 --shot 5 --load_init_weight --divide 1  --l 0.0000001
 ```
 
-
+# Contact
+gaozhi_2017@bit.edu.cn
 
