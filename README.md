@@ -19,25 +19,33 @@ Concretely,
 For 1-shot inductive tasks, please run:
 -------
 ```
-python inductive_oneshot/train_protonet.py --c_lr 0.001 --lr 1e-7 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 100 --step_size 40 --model bigres12 --query 15 --rerank 80 --validation_way 5 --way 10 --shot 1 --load_init_weight --setting 'inductive' --multihead 20 --divide 1
+cd  GAE_code
+python train_protonet.py --c_lr 0.01 --lr 1e-6 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 100 --step_size 40 --model bigres12 --query 15 --rerank 80 --validation_way 5 --way 10 --shot 1 --load_init_weight --setting 'inductive' --multihead 20 --divide 2
+
 ```
 
 For 5-shot inductive tasks, please run:
 -------
 ```
-python inductive_multishot/train_protonet.py --c_lr 0.01 --lr 1e-6 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 100 --step_size 40 --model bigres12 --query 15 --rerank 11 --validation_way 5 --way 10 --shot 5 --load_init_weight --setting 'inductive' --multihead 1 --divide 200
+cd  GAE_code
+python train_protonet.py --c_lr 0.01 --lr 1e-6 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 100 --step_size 40 --model bigres12 --query 15 --rerank 11 --validation_way 5 --way 10 --shot 5 --load_init_weight --setting 'inductive' --multihead 1 --divide 3
+
 ```
 
 For 1-shot transductive tasks, please run:
 -------
 ```
-python transductive_oneshot/train_protonet.py --hyperbolic --c_lr 0.01 --lr 1e-7 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 200 --step_size 40 --model newres12 --query 15 --rerank 60 --validation_way 5 --way 10 --shot 1 --load_init_weight --divide 100  
+cd transductive_oneshot
+python train_protonet.py --hyperbolic --c_lr 0.01 --lr 1e-7 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 100 --step_size 40 --model newres12 --query 15 --rerank 60 --validation_way 5 --way 10 --shot 1 --load_init_weight --divide 2  --l 0.0000001
+
 ```
 
 For 5-shot transductive tasks, please run:
 -------
 ```
-python transductive_multishot/train_protonet.py --hyperbolic --c_lr 0.01 --lr 1e-7 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 200 --step_size 40 --model newres12 --query 15 --rerank 60 --validation_way 5 --way 10 --shot 5 --load_init_weight --divide 1 
+cd transductive_multishot
+python train_protonet.py --hyperbolic --c_lr 0.01 --lr 1e-7 --dataset MiniImageNet --dim 640 --gamma 0.1 --max_epoch 100 --step_size 40 --model newres12 --query 15 --rerank 60 --validation_way 5 --way 10 --shot 5 --load_init_weight --divide 1  --l 0.0000001
+ 
 ```
 
 # Contact
